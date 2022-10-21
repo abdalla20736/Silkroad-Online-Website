@@ -1,0 +1,16 @@
+(?(DEFINE)          # Construct a definition structure
+  (?<punc>[!?.]+)     # Define `punc` group consisting of `.`, `?` and `!`
+)                   # End of definition
+\b                  # Match a word boundary position
+(?>                 # Open a grouping (non-capturing) (a)
+  [a-z0-9]            # Match a digit or a lower case letter
+  \w*                 # And any number of word characters
+  |                   # Or
+  [A-Z]               # Match an upper case letter
+  \w{3,}              # And word characters more than 3
+  (?=                 # Followed by
+    (?&punc)          # Any number of `.`, `?` and `!` characters
+  )                   # End of positive lookahead
+)                   # End of grouping (a)
+(?&punc)            # Match any number of `.`, `?` and `!` characters
+\K\B\s*             # Reset match, assert a NWB position + any number of whitespaces
