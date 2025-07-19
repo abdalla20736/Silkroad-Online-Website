@@ -33,7 +33,7 @@ A role-based gaming website built using **PHP, HTML, CSS**, and a bit of **JavaS
 - **Backend:** PHP  
 - **Frontend:** HTML, CSS  
 - **Scripting:** JavaScript (basic)  
-- **Data Storage:** (Add MySQL or any DB here if applicable)  
+- **Data Storage:** SQL Server
 
 ---
 
